@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Homework</title>
     <link href="main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -32,9 +34,9 @@
                     <br>
                 </div>
             </div>
-            <div class="cont bl-left">
+            <div class="cont bl-left" id="itemlist">
                 <div class="nameBlock">
-                    <input class="itemName" name="itemName" placeholder="Назва товару" type="text"> <button class="add tooltip" data-tooltip="Додати">Додати</button>
+                    <input class="itemName" name="itemName" placeholder="Назва товару" type="text"> <button class="add tooltip" data-tooltip="Додати" onclick="addItem();">Додати</button>
                 </div>
                 <div class="item">
                     <p class="itemLable">Помiдори</p>
@@ -46,7 +48,7 @@
                             1
                         </div>
                         <div class="buttonAdd button tooltip" data-tooltip="Додати">
-                            <span>+</span>
+                            <span class="testAdd">+</span>
                         </div>
                     </div>
                     <div class="deleteItem tooltip" data-tooltip="Видалити">
@@ -59,7 +61,7 @@
                         <div class="buttonDelete button active tooltip" data-tooltip="Забрати">
                             <span>-</span>
                         </div>
-                        <div class="numberItem button">
+                        <div class="numberItem button" id="numberItem">
                             1
                         </div>
                         <div class="buttonAdd button tooltip" data-tooltip="Додати">
