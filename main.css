@@ -54,7 +54,7 @@
     box-shadow: inset 0 -10px 0 -7px rgba(202, 42, 43, 0.92);
 }
 
-.add {
+.addName {
     background-color: rgba(31, 135, 212, 0.97);
     padding: 14px;
     cursor: pointer;
@@ -73,7 +73,7 @@
     color: rgba(255, 255, 255, 0.99);
 }
 
-.add:hover {
+.addName:hover {
     background-color: rgba(7, 111, 184, 0.94);
 }
 
@@ -105,16 +105,6 @@ body {
     font-family: Tahoma;
 }
 
-.boughtButton {
-    display: none;
-    font-family: Tahoma;
-}
-
-.boughtCount {
-    margin-left: 38px;
-    font-family: Tahoma;
-}
-
 .buyContainer {
     border-top: 1px solid rgba(220, 220, 220, 0.97);
     border-bottom: 1px solid rgba(220, 220, 220, 0.97);
@@ -138,8 +128,9 @@ body {
     font-family: Tahoma;
 }
 
-.buyLable {
-    padding: 3px 5px;
+.buyLabel {
+    padding: 2px 5px;
+    margin-left: 4px;
     border-radius: 50%;
     background-color: rgba(244, 114, 28, 0.95);
     color: rgba(255, 255, 255, 0.99);
@@ -211,21 +202,21 @@ body {
     margin-left: 40%;
 }
 
-.container {
+.boxed {
     width: 100%;
     margin-top: 100px;
     margin-right: 5px;
     margin-left: 5px;
 }
 
+.box {
+    border-radius: 3px;
+}
+
 .center {
     width: 90%;
     margin: auto;
     max-width: 1200px;
-}
-
-.cont {
-    border-radius: 3px;
 }
 
 .deleteItem {
@@ -251,7 +242,7 @@ body {
     background-color: rgba(192, 40, 41, 0.95);
 }
 
-.itemName {
+.inputName {
     font-size: 14px;
     margin: 15px;
     margin-right: 0;
@@ -267,7 +258,7 @@ body {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.19);
 }
 
-.item {
+.itemBlock {
     margin-bottom: 10px;
     width: 100%;
     height: 40px;
@@ -275,7 +266,7 @@ body {
     font-size: 14px;
 }
 
-.itemLable {
+.itemLabel {
     float: left;
     line-height: 20px;
     text-align: center;
@@ -298,10 +289,6 @@ body {
     margin-right: 5px;
 }
 
-.notBuy {
-    margin-right: 16px;
-}
-
 .rightLabel {
     padding: 15px;
     font-weight: 600;
@@ -316,8 +303,6 @@ body {
     opacity: 0;
     padding: 6px 14px;
     border-radius: 8px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-    color: rgba(255, 255, 255, 0.99);
     content: attr(data-tooltip);
     margin-top: -40px;
     position: absolute;
@@ -327,6 +312,8 @@ body {
     transform: scale(0);
     transform-origin: center bottom;
     font-family: Tahoma;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    color: rgba(255, 255, 255, 0.99);
 }
 
 .tooltip:hover::after {
@@ -338,18 +325,18 @@ body {
 /* Mobile verions*/
 
 @media (max-width: 1000px) {
-    .cont {
+    .box {
         float: none;
         width: 100%;
         margin-top: 25px;
         min-width: 450px;
     }
 
-    .item:last-child {
+    .itemBlock:last-child {
         padding-bottom: 10px;
     }
 
-    .itemName {
+    .inputName {
         width: 73%;
     }
 }
